@@ -36,7 +36,7 @@
 quote="I love python"
 # print(quote[0])
 # print(quote[2])
-strings are immutable but will give you a copy.
+# strings are immutable but will give you a copy.
 # print(quote.replace('l','x'))
 # print(quote.upper())
 
@@ -49,4 +49,12 @@ strings are immutable but will give you a copy.
 #print(quote[-6:-1)
 # print(quote[0:6:2]) #tells you to skip by 2
 # print(quote[::3])
-print(quote[::-1]) #reverse the string
+#print(quote[::-1]) #reverse the string
+
+
+# x=10
+# while x>=0:
+#   print(x)
+#   x=x-1
+
+x= none
