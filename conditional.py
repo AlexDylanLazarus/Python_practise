@@ -21,3 +21,4 @@ elif(height1==height2):
 else:
   print(f"{person2} is taller than {person1}")
 
+#elif can be many but ther is only one if and one else.
