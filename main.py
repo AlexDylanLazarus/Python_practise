@@ -57,4 +57,4 @@ quote="I love python"
 #   print(x)
 #   x=x-1
 
-x= none
+x = None
