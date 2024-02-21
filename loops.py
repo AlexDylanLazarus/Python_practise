@@ -60,4 +60,30 @@
 
 # for curr in range(3):
 #   print(curr)
-  
+
+
+# avengers = [
+#   "Hulk",
+#   "Iron man",
+#   "Black widow",
+#   "Captain america",
+#   "Spider man",
+#   "Thor",
+# ]
+
+# for idx in range(len(avengers)):
+#   print(avengers[idx])
+
+#ORRR
+# filtered_names=[]
+
+# for avenger in avengers:
+#   if(len(avenger)>10):
+#     print(avenger)
+#     filtered_names.append(avenger)
+# print(filtered_names)
+
+#ORRR
+#I want the avenger from avengers list where the len>10
+# filtered_names=[avenger.upper() for avenger in avengers if len(avenger)>10]
+# print(filtered_names)
