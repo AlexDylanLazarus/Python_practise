@@ -38,10 +38,12 @@ que=input("what flavour do you want")
 
 #TERNARY operators
 # takes 3 operants
+#in it is a membership operator
+#a concise way to performa an if-else in single line
 
 #unary operators
 #not
-# ~ (n practical use)
+# ~ (not for practical use)
 
 #binary operators(2 operatorants)
 # >, <, ==, and, or, >=, <=, !=
@@ -56,9 +58,11 @@ que=input("what flavour do you want")
 # 32 bit
 # 4= 000000000100
 
-#1111111111011 (flip the 4)
+#1111111111011 (flip the zeros to ones and ones to zeros)
 
 #Making it simpler
-# result= "yes, we do have it" if que in shop_stock else "no, we ran out of stock"
-# print(result)
+shop_stock="vanilla, lime, chocolate"
+que=input("what flavour do you want")
+print('"yes, we do have it" if que in shop_stock else "no, we ran out of stock"')
+
 

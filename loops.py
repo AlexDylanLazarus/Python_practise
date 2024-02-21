@@ -30,30 +30,34 @@
 # powered_up_stats=[stat * 2 for stat in player_stats]
 # print[powered_up_stats]
 
-avengers = [
-    "Hulk",
-    "Iron man",
-    "Black widow",
-    "Captain america",
-    "Spider man",
-    "Thor",
-]
+# avengers = [
+#     "Hulk",
+#     "Iron man",
+#     "Black widow",
+#     "Captain america",
+#     "Spider man",
+#     "Thor",
+# ]
 
 
 
-for char in avengers:
-  print(len(char))
+# for char in avengers:
+#   print(len(char))
 
-#Task 2
-avengers = [
-  "Hulk",
-  "Iron man",
-  "Black widow",
-  "Captain america",
-  "Spider man",
-  "Thor",
-]
+# #Task 2
+# avengers = [
+#   "Hulk",
+#   "Iron man",
+#   "Black widow",
+#   "Captain america",
+#   "Spider man",
+#   "Thor",
+# ]
 
-for char in avengers:
-if(len(char) > 10):
-   print(char)
+# for char in avengers:
+#   if(len(char) > 10):
+#    print(char)
+
+# for curr in range(3):
+#   print(curr)
+  

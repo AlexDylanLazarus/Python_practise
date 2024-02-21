@@ -2,7 +2,7 @@
 # marks=[98, 75, 40, 45, 80, 90, 45, 80, 60]
 # print(type(marks))
 # # marks.pop()
-# # marks.pop() #does mutate the list
+# # marks.pop() #does mutate the list. By deafult it removes the last element
 # #marks.pop(3)# removes index
 # print(marks[0:len(marks)-3])
 # #another way to do it:
@@ -53,8 +53,15 @@
 #remove is different from pop because it uses the value where as pop uses the index.
 
 
-subjects= ["eng","maths","science"]
-print(", ".join(subjects))
-#output will be eng, maths, science
-subjects.sort(reverse=True)
-print(subjects)
+# subjects= ["eng","maths","science"]
+# print(", ".join(subjects))
+# #output will be eng, maths, science
+# subjects.sort(reverse=True)
+# print(subjects)
+
+#combinig 2 list just +.
+
+# list=[1,3,3,2,5,6]
+# # .sort is mutable
+
+# print(list.sort(), list)

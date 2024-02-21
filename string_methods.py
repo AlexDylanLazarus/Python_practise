@@ -61,3 +61,5 @@ name="ark"
 print(name.islower()) #true if all the characters are lower case
 
 print(len(name))
+
+#you cna keep on .chaining as long as it is a string
