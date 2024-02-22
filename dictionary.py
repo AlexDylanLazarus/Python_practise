@@ -241,7 +241,7 @@ person = {
 # # #Unpacking operator for dictionary is **
 # # movie_copy2={**movie, "rating": 10}
 # # movie_copy3={**movie, "rating": 10, "year":2002} #it will give 2002 now as output instead of 2001. If you had a second year: itll use the last one coz you cant have duplicate keys
-# # movie_copy4={"rating": 10, "year":2002, **movie}#the name will come at the end
+# # movie_copy4={"rating": 10, "year":2002, **movie}#the name will come at the end and it'l return 2001
 # # print(movie_copy4)
 
 # # #You can combine objects together
