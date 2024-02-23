@@ -86,3 +86,10 @@ party_date = datetime(2024, 3, 14)
 for guest in guests:
   print(f"* {guest:^20} *")
   print(f"You are invited to the party on {party_date:%B %d, %Y}!")
+
+about_me="""
+Hi, My name is Caleb
+I stay at Cape Town
+"""
+
+print(about_me) #this will print it as is. 
