@@ -99,7 +99,7 @@
 # ]
 # book={"title": "Fluent Python II", "author": "Alex", "year": 2016, "available":"True"}
 # def add_book(library, new_book):
-#   library.append(new_book)
+#   library.append(new_book)  #using append because it is mutable . You are sharing the reference
 
 # add_book(library_list.copy(),book)
 # print(library_list)
@@ -144,7 +144,7 @@
 #functions treated as first class citizens
 #1. assign a function to variable
 #2. pass a function as argument
-#3. Return a function
+#3. Return a function (a function that returns a function))
 
 
 
@@ -245,8 +245,8 @@
 
 
 #HOF (High Order Function)- Argument function
-# result1=map(lambda x:x*2,[10,30,60])
-# result2=filter(lambda x:x>10,[10,50,60,100,6,8,30])
+# result1=map(lambda x:x*2,[10,30,60]) #the input length and output length will be the same for map. 
+# result2=filter(lambda x:x>10,[10,50,60,100,6,8,30]) #filter will expect a boolean. If it is true it will return the value
 # print(list(result1))
 # print(list(result2))#will return all values greater han 10
 
@@ -268,10 +268,10 @@
 # print(max([10,30,60])) #will return 60
 # print(min([10,30,60])) #will return 10
 
-# print(all([True, False, True])) #all has to be true to return true. Behaves like an `an`
+# print(all([True, False, True])) #all has to be true to return true. Behaves like an `and`
 # print(any([True, False, True])) #any can be true. Behaves like an `or`
 
-print(all([10,0,30,-1])) #will give false coz 0 is considered false
+# print(all([10,0,30,-1])) #will give false coz 0 is considered false
 
 #Falsy values. When convered to boolean it will be false. Other values are Truthy
 # 1. 0
@@ -290,4 +290,20 @@ print(all([10,0,30,-1])) #will give false coz 0 is considered false
 # else:
 #   print("super")
 # #this will only print super coz its falsy values. 
+
+#map and filter are High Order Functions
+#A map takes a list and calls a function for each element in the list. It returns a new list with the results of the function.
+
+# avengers=[
+#   "hulk",
+#   "iron man",
+#   "black widow",
+#   "captain america",
+#   "spider man"
+#   "thor"
+# ]
+
+# print(list(map(lambda avenger: len(avenger), avengers)))   #Composition is the word people use for chaining things.
+
+## all sequences are iterables but not the other way around.
 

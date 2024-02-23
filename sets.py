@@ -36,7 +36,7 @@
 # print(indoor_activities.union(outdoor_activities))
 
 # #intersection is for common items
-# print(indoor_activities.intersection(outdoor_activities)) #just gives cycling
+# print(indoor_activities.intersection(outdoor_activities)) #just gives cycling. Only the common items 
 
 # print(outdoor_activities.difference(indoor_activities))
 # print(indoor_activities.difference(outdoor_activities)) #will give gaming and reading
