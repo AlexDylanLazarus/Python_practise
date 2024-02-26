@@ -1,7 +1,7 @@
 #create a list with the average rating for all of these things
 #only use map, filter, all, any, len, sum, min, max
 
-
+from pprint import pprint
 
 movies = [
 
@@ -66,7 +66,16 @@ print(f"The movies higher than 4.6 are {list(map(lambda movie: movie['title'], m
 sorted_list=sorted(
   movies, key=lambda movie: sum(movie["ratings"])/len(movie["ratings"]), reverse=True
 )
-print(f"{list(map(lambda movie: movie['title'], sorted_list))}") #did the same thing you did for filter. using the sorted list as a list now.
+sorted_movies_titles=map(lambda movie: movie["title"], sorted_list)
+top_3_movies=list(sorted_movies_titles)[:3]
+print(", ".join(top_3_movies))
+
+
+# print(f"{list(map(lambda movie: movie['title'], sorted_list))[:3]}") #did the same thing you did for filter. using the sorted list as a list now. This gives top 3. 
+
+
+
+
 
 #to know when to use filter
 # It always returns copy of the array (same like map)
