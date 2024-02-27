@@ -66,8 +66,8 @@ add= lambda x: (lambda y: x+y)
 #     nums.append(10)
 #     print(nums)
     
-
-def fun(nums=None):
+#Singleton -> None. It is one of a kind
+def fun(nums=None): #None is an immutable value. None point is used for same memory address
     if nums is None:
         nums = []
     nums.append(10)
@@ -76,6 +76,17 @@ def fun(nums=None):
 fun()    
 fun()
 fun()
+fun()
+fun([70])
+
+x1=[2,3]
+x2=[2,3]
+x3=x1
+print(x1==x2) #checks the vaue
+print(x1 is x2) #returns false coz they are not pointing at the same memory address/ checks memory address
+print(x1 is x3) #returns true
+
+
 
 # fun() #prints [10]
 # fun()
