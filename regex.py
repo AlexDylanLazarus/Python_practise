@@ -13,7 +13,7 @@ numbers="""
 # \D can be anything other tahn digits
 # . means any character
 # if you want to atch the full stop then say \.
-#[abc] can be a or b or c
+#[abc] can be a or b or c. Means character set.
 # [^abc]s the abc is excluded
 # [a-z] anything from a to z
 # [A-Z] capital letter 
@@ -26,12 +26,16 @@ numbers="""
 # (\w+ (\d+))
 # ? to say dont be greedy (.*)x(.*)?
 #I love (dogs|cats) works like or
+# \s will match space and new line
+#\S is the opposite
+
+
 
 
 # quote="To be or not to be"
 # # r - raw
 # is_be=re.search(r'be$',quote) 
-
+# print(type(is_be)) #this is a type re.match
 # output="Present" if is_be else "Not present"
 # print(output)
 
@@ -59,7 +63,7 @@ names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # namey=", ".join(names)
 # print(namey)
 
-empty=[re.sub(r'(\w+) (\w+)',r'\2 , \1 ', name) for name in names]
+empty=[re.sub(r'(\w+)\s+(\w+)\s+',r'\2 , \1 ', name) for name in names]
 print(empty)
 
 # output = [re.sub(r'\s*(\w+)\s+(\w+)\s*',r'\2, \1', name) for name in names]
