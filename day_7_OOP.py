@@ -106,9 +106,9 @@ trans = {
     'third': [transactions(3, '3 Mar', 'deposit', 7000)]
 }
 
-print("# #  id   Date       Type     Amount  ")
+print(" #  id   Date       Type     Amount  ")
 
 for key, value in trans.items():
     for i, transaction in enumerate(value, start=1):
-        print(f"# {i}. {transaction.id}  {transaction.date}   {transaction.type}       {transaction.amount}")
+        print(f" {i}. {transaction.id}  {transaction.date}   {transaction.type}       {transaction.amount}")
 
