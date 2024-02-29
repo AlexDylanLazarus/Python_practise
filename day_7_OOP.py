@@ -137,7 +137,9 @@ class CheckingAccount(Bank):
     def withdraw(self, num):
         """This is for withdraw money with transaction fee"""
         total_amount = num + CheckingAccount.transaction_fee
-        return super().withdraw(total_amount)
+        return super().withdraw(
+            total_amount
+        )  # you call it from base class but add the child's stuff
 
     def __str__(self):
         """Human readable output"""
@@ -166,11 +168,13 @@ print(gemma.apply_interest())
 print(gemma.display_balance())
 print(Alex.withdraw(50))
 print(Alex.display_balance())
-print(Alex)  # behind the scene this is doing alex.__str__
+print(
+    Alex
+)  # behind the scene this is doing alex.__str__ . It wont print out the object main thing.
 # print(Alex._balance)will give error
 # print(caleb)
 # print(Alex.__repr__())
-print(repr(Alex))  # better than print(Alex.__repr__())
+print(repr(Alex))  # better than print(Alex.__repr__()). It is reconstruct -> instance
 # print(type(Alex))
 print(Alex + caleb)  # returns 100049
 

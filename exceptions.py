@@ -33,7 +33,7 @@ def calculate_age():
         birth_year = int(user_input)
         age = current_year - birth_year
 
-        if birth_year < 0:
+        if birth_year <= 0:
             # raise -> Stops further execution
             raise ValueError("Year cannot be negative")
         if birth_year > current_year:
