@@ -64,7 +64,7 @@ def main():
     ##ORRRR you can use generators
 
 
-# Generator - clean | infinite_integers() -> iterator. It is an easier way to create iterator.
+# Generator - clean | infinite_integers() -> iterator. It is an easier way to create iterator. Yield-> pauses. nex-> continue
 def infinite_integers():
     n = 0
     while True:
