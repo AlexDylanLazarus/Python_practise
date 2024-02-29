@@ -64,7 +64,7 @@ import pprint
 
 # encapsulation | putting in all together container | giving access
 class Bank:
-    # Class variable
+    # Class variable if you want to share the same value
     interest_rate = 0.02
     no_of_accounts = 0
 
@@ -73,11 +73,12 @@ class Bank:
         Bank.interest_rate = rate
 
     # we generally dont use cls methods if we are not updating anything. You should rather use static methods @staticmethod
-    @classmethod
-    def get_total_no_accounts(cls):
+    @staticmethod
+    def get_total_no_accounts():
         return f"In total we have {Bank.no_of_accounts} accounts"
 
     # instance method
+    # self points to the instance we created
     def __init__(self, accno, name, balance):
         # instance variable
         self.accno = accno
@@ -92,6 +93,7 @@ class Bank:
         Bank.no_of_accounts += 1
         print(self.name, Bank.no_of_accounts)
 
+    # you can also have private methods like def __display_balance
     def display_balance(self):
         return f"R{self._balance:,}"
 
@@ -114,6 +116,8 @@ class Bank:
 # interest rate is higher. 0.05. If you apply interest on her and check her balance, it would be
 class SavingsAccount(Bank):
     interest_rate = 0.05
+
+    ##private variables and methods dont get inherited
 
     # dont need the following:
     # def __init__(self, accno, name, balance):
@@ -151,7 +155,7 @@ class CheckingAccount(Bank):
 
 gemma = Bank("123", "Gemma Porill", 15_000)
 dhara = Bank("124", "Dhara Kara", 50_001)
-caleb = Bank("125", "Caleb Potts", 100_000)
+# caleb = Bank("125", "Caleb Potts", 100_000)
 Alex = CheckingAccount(126, "Alex Lazarus", 100)
 caleb = CheckingAccount("125", "Caleb Potts", 100_000)
 
