@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #200302;
+}
+
+div {
+    width: 330px;
+    text-align: center;
+}
+
+img {
+    border-radius: 25px;
+    width: 330px;
+}
+
+.category {
+    color: rgba(255, 255, 255, 0.397);
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.808);
+}
+
+h1 {
+    color: white;
+    font-weight: bolder;
+}

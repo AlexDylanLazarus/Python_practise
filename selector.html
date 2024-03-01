@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* types of selectors
+        1. element  - p, h2, h3
+        2. class    -.brand, .fun. Generally always go for class.
+        3. id       - #main
+        */
+        .brand{
+            font-weight:600;
+            text-align:center;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            color:orange;
+        }
+        /* Unique- use only once */
+        #main{
+            color:purple;
+            font-size:24px
+        }
+        #content{
+            line-height: 1.5em
+        }
+        a{
+            text-decoration:none;
+        }
+        .container{
+            background-color: skyblue;
+        }
+        /* box model of css */
+    </style>
+     <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+    <!-- <a href="index.html">Google</a> -->
+    <!-- You can also just use / -->
+    <ul class="navigation">
+        <li><a href="/">Home</a></li>
+        <li><a href="/selector.html">Selector</a></li>
+        <li><a href="https://www.Google.com">Google</a></li>
+    </ul>
+    <p class="brand">Gucci</p>
+    <h2 class="brand">Luxury brand</h2>
+    <div class="container">
+        <p id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem ex quod laudantium cupiditate officiis eaque quas assumenda adipisci fuga repellat eius, voluptates ea neque quia aliquid in laborum ullam?
+        </p>
+        <p>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem ex quod laudantium cupiditate officiis eaque quas assumenda adipisci fuga repellat eius, voluptates ea neque quia aliquid in laborum ullam?
+        </p>
+    </div>
+    <div>
+        <h2>fun</h2>
+        <h2>fun</h2>
+    </div>
+    <ul>
+        <li id="main">Gaming</li>
+        <li>Running</li>
+        <li>Movies</li>
+        <li class="brand">Books</li>
+        <li>Series</li>
+    </ul>
+</body>
+</html>
