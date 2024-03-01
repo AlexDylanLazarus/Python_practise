@@ -35,7 +35,9 @@ def calculate_age():
 
         if birth_year <= 0:
             # raise -> Stops further execution
-            raise ValueError("Year cannot be negative")
+            raise ValueError(
+                "Year cannot be negative"
+            )  # you generally use this for negative values
         if birth_year > current_year:
             raise ValueError("You are not flash to be from the future")
         print(f"You are {age} years old")
