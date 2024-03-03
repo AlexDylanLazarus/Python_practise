@@ -127,3 +127,63 @@ spells = [("Lumos", 5), ("Obliviate", 10), ("Expelliarmus", 7)]
 # Expected Task: Sort the spells list by power level in descending order using a lambda function.
 sorted_spells = sorted(spells, key=lambda x: x[1], reverse=True)
 print(sorted_spells)
+
+# Q8
+# Setup Code
+ingredients = ["Wolfsbane", "Eye of Newt", "Dragon Scale"]
+# Expected Task: Use `map` to append ": 3 grams" to each ingredient.
+
+transformed_ingredients = map(lambda x: x + ": 3 grams", ingredients)
+print(list(transformed_ingredients))
+
+# Q9
+# Setup Code
+books = [
+    {"title": "A History of Magic", "pages": 100},
+    {"title": "Magical Drafts and Potions", "pages": 150},
+]
+# Expected Task: Filter books with more than 120 pages and format their titles to uppercase.
+
+filtered_books = filter(lambda book: book["pages"] > 120, books)
+print(list(map(lambda x: x["title"], filtered_books)))
+
+
+# Q10
+class WizardDuel:
+    def __init__(self, wizard1, wizard2):
+        self.wizard1 = wizard1
+        self.wizard2 = wizard2
+
+    def cast_spell(self, wizard, spell_power):
+        wizard.health -= spell_power
+
+    def determine_winner(self):
+        if self.wizard1.health > self.wizard2.health:
+            return self.wizard1
+        elif self.wizard2.health > self.wizard1.health:
+            return self.wizard2
+        else:
+            return None
+
+
+class Wizard:
+    def __init__(self, name, health):
+        self.name = name
+        self.health = health
+
+
+harry = Wizard("Harry", 15)
+draco = Wizard("Draco", 15)
+
+duel = WizardDuel(harry, draco)
+duel.cast_spell(harry, 5)
+duel.cast_spell(draco, 8)
+
+winner = duel.determine_winner()
+
+if winner:
+    print(
+        f"After a duel between {winner.name} and {draco.name}, {winner.name} wins with {winner.health} health points left."
+    )
+else:
+    print("It's a tie!")
