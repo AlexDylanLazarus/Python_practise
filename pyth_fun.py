@@ -210,7 +210,165 @@ def potion_making():
             else:
                 print("created love potion")
     except PotionError as e:
-        print(e)
+        print(f"Caught PotionError: {e}")
 
 
 potion_making()
+
+# Q12
+# Setup Code
+library = [
+    {"title": "Unfogging the Future", "author": "Cassandra Vablatsky"},
+    {"title": "Magical Hieroglyphs and Logograms", "author": "Bathilda Bagshot"},
+]
+# Expected Task: Use a list comprehension to select books written by Bathilda Bagshot.
+bath_books = [book for book in library if book["author"] == "Bathilda Bagshot"]
+print(bath_books)
+
+# Q13
+# Setup Code
+house_points = [
+    {"house": "Gryffindor", "points": 35},
+    {"house": "Slytherin", "points": 50},
+    {"house": "Gryffindor", "points": 60},
+    {"house": "Slytherin", "points": 40},
+]
+
+
+# Expected Task: Aggregate points for each house and print the total.
+total_house = {}
+for house in house_points:
+    hou = house["house"]
+    poi = house["points"]
+    if hou in total_house:
+        total_house[hou] += poi
+    else:
+        total_house[hou] = poi
+
+for housey, pointy in total_house.items():
+    print(f"{housey} : {pointy}", end=", ")
+
+
+# Q14
+
+# Setup Code
+# Expected Task: Create a base class `MagicalCreature` and subclasses `Dragon`, `Unicorn`. Each subclass should have a unique `sound` method.
+
+
+class MagicalCreature:
+    def __init__(self, name):
+        self.name = name
+
+    def calling_sound(self):
+        return f"makes sound"
+
+
+class Dragon(MagicalCreature):
+
+    def calling_sound(self):
+        return f"Roar"
+
+
+class Unicorn(MagicalCreature):
+
+    def calling_sound(self):
+        return f"Neigh"
+
+
+toby = MagicalCreature("toby")
+maxy = Dragon("max")
+lady = Unicorn("uni")
+print(maxy.calling_sound())
+print(lady.calling_sound())
+
+
+# Q15
+# Setup Code
+artifacts = [
+    {"name": "Cloak of Invisibility", "age": 657, "power": 9.5},
+    {"name": "Elder Wand", "age": 1000, "power": 10},
+    {"name": "Resurrection Stone", "age": 800, "power": 7},
+]
+# Expected Task: Sort the artifacts first by age, then by power, using a lambda function.
+
+
+print(sorted(artifacts, key=lambda x: x["age"], reverse=True))
+print(sorted(artifacts, key=lambda x: x["power"], reverse=True))
+
+# Q16
+# Setup Code
+wizard = {"name": "Albus Dumbledore", "title": "Headmaster", "house": "Gryffindor"}
+# Expected Task: Use an f-string to create a profile string that includes the wizard's name, title, and house.
+
+print(f"{wizard['name']}, the {wizard['title']} of {wizard['house']}")
+
+# Q17
+# Setup Code
+adopters = [("Harry", "Phoenix"), ("Hermione", "House Elf")]
+creatures = [("Fawkes", "Phoenix"), ("Dobby", "House Elf"), ("Buckbeak", "Hippogriff")]
+# Expected Task: Use `filter` and `map` to create a list of matches between adopters and creatures.
+
+matches = list(
+    map(
+        lambda adopter: (
+            adopter[0],
+            next(filter(lambda creature: creature[1] == adopter[1], creatures))[0],
+        ),
+        adopters,
+    )
+)
+
+print(matches)
+
+# Q18
+
+# Setup Code
+ingredients1 = ["Moonstone", "Silver Dust", "Dragon Blood"]
+# Expected Task: For each pair of ingredients, print out the unique potion they produce.
+
+potion_combinations = {
+    ("Moonstone", "Silver Dust"): "Visibility Potion",
+    ("Moonstone", "Dragon Blood"): "Strength Potion",
+    ("Silver Dust", "Dragon Blood"): "Invisibility Potion",
+}
+
+for i in range(len(ingredients1)):
+    for j in range(i + 1, len(ingredients1)):
+        ingredient_pair = (ingredients1[i], ingredients1[j])
+        potion = potion_combinations.get(ingredient_pair)
+        if potion:
+            print(
+                f"Combining {ingredient_pair[0]} and {ingredient_pair[1]} produces a {potion}."
+            )
+
+
+# Q19
+# Setup Code
+data = [
+    {"id": 1, "name": "Item 1", "tags": ["tag1", "tag2"]},
+    {"id": 2, "name": "Item 2", "tags": ["tag2", "tag3"]},
+    {"id": 3, "name": "Item 3", "tags": ["tag1", "tag3"]},
+]
+# Expected Task: For each item, add a new tag "tag4" only if "tag1" is present in the tags list.
+
+for item in data:
+    if "tag1" in item["tags"]:
+        item["tags"].append("tag4")
+
+print(data)
+
+# Q20
+tasks = [
+    {"id": 1, "priority": "High", "completed": False},
+    {"id": 2, "priority": "Low", "completed": True},
+    {"id": 3, "priority": "Medium", "completed": False},
+]
+
+
+def custom_sort(task):
+    return (task["completed"], {"High": 0, "Medium": 1, "Low": 2}[task["priority"]])
+
+
+sorted_tasks = sorted(tasks, key=custom_sort)
+
+print(sorted_tasks)

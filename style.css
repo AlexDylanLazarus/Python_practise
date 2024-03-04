@@ -4,28 +4,47 @@ body {
     align-items: center;
     height: 100vh; 
     margin: 0; 
-    background-color: #200302;
+    /* background-color: #200302; */
+    background-image: linear-gradient(381deg, #272323, #251c1c, #231616, #210e0e, #200302);
 }
 
 div {
-    width: 330px;
+    max-width: 360px;
     text-align: center;
 }
 
 img {
     border-radius: 25px;
-    width: 330px;
+    width: 100%;
 }
 
 .category {
     color: rgba(255, 255, 255, 0.397);
+    display: inline;
+    font-family:"Roboto", sans-serif; 
+    font-size:14px;
+}
+
+.category1 {
+    color: rgba(255, 255, 255, 0.808);
+    display: inline;
 }
 
 .description {
-    color: rgba(255, 255, 255, 0.808);
+    color: rgba(255, 255, 255, 0.829);
+    font-size:15px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.25px;
 }
 
 h1 {
     color: white;
     font-weight: bolder;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size:32px;
 }
