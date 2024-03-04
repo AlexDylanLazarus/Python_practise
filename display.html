@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: orange;
+            /* the paragraphs will only expand to the 500px */
+            width:500px;
+        }
+        p{
+            background: purple;
+        }
+        a{
+            background-color: pink;
+        }.web{
+            height: 400px;
+            width:300px;
+            /* converting the anchor tag named web to block from inline.
+            
+            */
+            display: inline-block;
+            /* the hybrid is inline block to allow side by side things to exist
+            It respects height and width
+            */
+        }
+    </style>
+</head>
+
+<!-- the body has a default margin of 0px thats why theres a gap -->
+<body>
+    <a class="web" href="">Google.com</a> <a href="">link 10</a>
+    <!-- BLOCK -->
+    <!-- This will be one below the other/stacked
+        By default it has display:block. 
+        Full width of the container 
+        Respects height and width-->
+    <p>para 1</p><p>para 2</p> 
+    <!-- headings are also block elements as well as block -->
+
+
+    <!-- INLINE -->
+    <!-- Side by side
+        This will b enext to eachother even if you put the elements under each other. 
+        It has default of dislpay:inline. 
+        Only takes content width 
+        inline elements do not respect height and width-->
+    <a href="">link 1 </a> <a href="">link 2 </a>
+    <div class="container">
+
+        <p>para 1</p>
+        <p>para 2</p>
+
+    </div>
+        
+
+    <img src="https://images.unsplash.com/photo-1503424886307-b090341d25d1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D">
+    <a href="">Link 3</a>
+    <h1>Cool</h1>
+</body>
+</html>

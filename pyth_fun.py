@@ -187,3 +187,30 @@ if winner:
     )
 else:
     print("It's a tie!")
+
+
+# Q11
+class PotionError(Exception):
+    def __init__(self, ingredient):
+        self.ingredient = ingredient
+        self.message = "is not a valid ingredient for the Love Potion."
+        super().__init__(self.message)
+
+    def __str__(self):
+        return f"'{self.ingredient}' {self.message}"
+
+
+def potion_making():
+    try:
+        love_potion = ["Wolfsbane", "Dragon Scale"]
+        enter_ingredient = input("enter ingredient")
+        for item in love_potion:
+            if enter_ingredient != item:
+                raise PotionError(enter_ingredient)
+            else:
+                print("created love potion")
+    except PotionError as e:
+        print(e)
+
+
+potion_making()
