@@ -7,7 +7,7 @@
     <style>
       .box1,
       .box2,
-      .box3 {
+      .box3{
         /* display: inline-block; */
         height: 300px;
         width: 200px;
@@ -23,24 +23,18 @@
  
       .box3 {
         background: pink;
+        border: 2px solid palevioletred;
+        width:100px;
       }
- 
       .container {
-        display: grid;
-        /* you always want flex and grid to be on the parent */
-        /* fr stands for fractional unit */
-        /* it works on ratios. 1fr 1fr 1fr == 1:1:1 */
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        /* the middle one will be double the size */
-        /* grid-template-columns: 1fr 2fr 1fr; */
-        /* the following gives 12 columns with same size*/
-        grid-template-columns: repeat(4,1fr);
-
-        /* difference between flex and grid */
-        /* You can use one insisde the other */
-        /* flex- 1d */
-        /* grid- 2d. for example  */
+        /* display: flex; */
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap:20px;
+        column-gap: 10px;
+        /* if it is flex it dont go directly under. grid makes the next one directly under */
       }
+      /* grid will try to match the size of the other column */
     </style>
   </head>
   <body>
@@ -63,14 +57,20 @@
           voluptatem.
         </p>
       </div>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+          voluptatem.
+        </p>
+      </div>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+          voluptatem.
+        </p>
+      </div>
+
     </section>
   </body>
 </html>
  
-<!--
-    Arrangement of elements
- -->
- <!-- space-around is half the size the between ones
-space-evenly the spaces are even
--->
-
