@@ -26,8 +26,14 @@
       }
  
       .container {
-        display: flex;
+        display: grid;
         /* you always want flex and grid to be on the parent */
+        /* fr stands for fractional unit */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* the middle one will be double the size */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* the following gives 12 columns with same size*/
+        grid-template-columns: repeat(4,1fr);
       }
     </style>
   </head>
