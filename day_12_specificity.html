@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS- Cascading style sheet -->
+    <!-- think of a waterfall that goes down steps. In CSS it means overriding -->
+    <style>
+        p{
+            font-size:48px;
+        }
+        .fun{
+            color:skyblue;
+        }
+        p{
+            color:crimson;
+        }
+          p{
+            color:orange /*!important;*/
+        }
+    </style>
+</head>
+<body>
+    <p class="fun" id="cool" style="color:teal">Para</p>
+</body>
+</html>
+
+<!--  !important (UN) > inline (president) > id (mother)>  class (father)> element (you) -->
+<!-- Specificity- when there is a clash between styles which would be given higher priority -->
+<!-- avoid styling with ids and inline and important -->
