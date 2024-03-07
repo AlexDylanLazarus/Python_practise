@@ -83,3 +83,16 @@ select DISTINCT title, rating*10 as rating_percent from movies join boxoffice on
 select DISTINCT title, year % 2  as rating_percent from movies join boxoffice on id=movie_id WHERE rating_percent=-0
 
 -- exercise 10
+SELECT MAX(years_employed) FROM employees;
+select role, avg(years_employed) from employees group by role
+select building, sum(years_employed) from employees group by building
+
+-- exercise 11
+SELECT count(role) FROM employees where role="Artist"
+SELECT *, count(role) FROM employees group by role
+select role, sum(years_employed) from employees where role="Engineer"
+
+
+-- exercise 12
+SELECT count(title),director FROM movies group by director;
+select director, sum(domestic_sales) + sum(international_sales) from movies join boxoffice on id=movie_id Group by director
