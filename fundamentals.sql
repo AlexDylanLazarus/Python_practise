@@ -12,11 +12,15 @@
     -- 3. Having a table without a primary key is not permitted. The column you're choosing should be unique. E.g bank account number. They should not be null. Only one column can be a primary key.  
     -- 4. repeating groups are not permitted
 
+    -- REMEMBER THAT YOU CANT HAVE A VALUE WITH RANGE 
+
 -- second normal form
     -- each non-key attribute must depend on the entire primary key. If the primary key is a composite key then break it into a table with just half the composite key
 
 -- third normal form
     -- every non-key attribute in a table should depend on the key, the whole key, and nothing but the key
+    -- if there is an indirect dependency then create table of the non-key attribute and the attribute it does directly depend on.
+
 
 
 -- exercise 1 
@@ -61,3 +65,11 @@ SELECT title, domestic_sales, international_sales FROM movies INNER JOIN boxoffi
 SELECT title, rating FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id ORDER BY rating DESC;
 
 -- exercise 7
+SELECT DISTINCT building FROM employees;
+SELECT * FROM buildings;
+SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building;
+--when you want to include empty then have left/right
+
+-- exercise 8
+SELECT name, role FROM employees WHERE BUILDING IS NULL
+SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building WHERE role is null
