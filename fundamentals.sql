@@ -69,7 +69,17 @@ SELECT DISTINCT building FROM employees;
 SELECT * FROM buildings;
 SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building;
 --when you want to include empty then have left/right
+-- which ever is left of the left join in the statement, you will get extra items from there, for example, buidling in this case
+
 
 -- exercise 8
 SELECT name, role FROM employees WHERE BUILDING IS NULL
 SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building WHERE role is null
+
+
+-- exercise 9
+SELECT *, (domestic_sales + international_sales) / 1000000 AS gross_sales_millions FROM movies JOIN boxoffice ON movies.id = boxoffice.movie_id;
+select DISTINCT title, rating*10 as rating_percent from movies join boxoffice on id=movie_id
+select DISTINCT title, year % 2  as rating_percent from movies join boxoffice on id=movie_id WHERE rating_percent=-0
+
+-- exercise 10
