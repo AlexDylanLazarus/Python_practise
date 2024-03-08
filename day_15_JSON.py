@@ -117,6 +117,8 @@ from pprint import pprint
 
 # dictionary to string -> dumps
 # string to dictionary -> loads
+
+
 # Every language can understand string
 # So json can speak every language because every language uses string
 # frontend dont care if it is in python or not, as long as it is in json
@@ -162,18 +164,19 @@ from pprint import pprint
 # Starting blog_post.json
 with open("blog_post.json", "r") as file:
     information = json.load(file)
-    print(information, type(information))
+    # print(information)
 
+posts_summary = []
 
-# Expected output posts_summary.json
-# {
-#     "posts_summary": [
-#         {"title": "The Future of AI", "author": "Alice", "number_of_comments": 3},
-#         {"title": "Learning Python", "author": "Bob", "number_of_comments": 1},
-#         {
-#             "title": "Web Development Trends",
-#             "author": "Charlie",
-#             "number_of_comments": 0,
-#         },
-#     ]
-# }
+for post in information["posts"]:
+    post_summary = {
+        "title": post["title"],
+        "author": post["author"],
+        "number_of_comments": len(post["comments"]),
+    }
+    posts_summary.append(post_summary)
+
+summary_data = {"posts_summary": posts_summary}
+
+with open("posts_summary.json", "w") as file:
+    json.dump(summary_data, file, indent=4)
