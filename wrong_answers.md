@@ -148,3 +148,107 @@ except Exception as e catches all exception that inherit from Exception, while a
 
 
 Both A and B 
+
+
+## test 3 
+the total outer width question
+
+
+which list type displays an items in a numbered format?
+<ol>
+
+which html element is used to define a part of text in an inline format?
+<span>
+
+which css property is used to changed the background color of an element?
+background-color
+
+CSSOM 
+cascading stylesheet object model
+import
+
+which css property changes he text color of an element?
+color
+
+difference between id and class
+id can only be used once, class can be used multiple times
+
+in css, if two selectors apply to the same element, what determines which style is applied
+the specificity of the selector
+
+what does the !important rule in css do?
+overrides all other styling rules
+
+which display value does not preserve the space for the element in the layout
+none
+
+which css property adds space between characters?
+letter-spacing
+
+in the css model, what propperty adds space inside the border of an element?
+padding
+
+which color format allows for specifying transparency?
+rgba
+
+in css, which property is inheritied by default from the parent element?
+color
+
+which css property creates a transition effect when changing from one style to another?
+transition
+
+given <div style="margin:20px;border:5px solid black;">content</div> what is the total outer width if the content width is 100px?
+the answer is 170px coz everything doubles
+
+
+what command initialize a new git repository
+git init
+
+which branch is traditionally used for the stable version of a project
+master because its the one given to the customer
+
+what does the `git commit -m "message"` command do?
+snapshots the current work with a descriptive message
+
+what is the primary purpose of the staging area in git?
+to prepare and review before committing
+
+what results from a fast-forward merge in git?
+the target branch pointer moves forward to match the source branch
+target- master
+source- dev
+
+how do you resolve a merge conflict in git
+by manually editing the files to resolve conflicts, then staging and committing
+
+wat distinguished git from github
+all of the above
+
+what is the best practice for writing commit messages?
+including why and what changes were made
+
+how does creating branches in git help with project development?
+it allows multiple features to be developed in parallel without affecting the main codebase.
+
+what is the recommended frequency for committing changes in git?
+after every few logical changes
+
+in git what does the command `git checkout -b dev` do?
+creates and checks out to a new branch named 'dev'
+
+<----git switch is the new command people use---->
+
+what is the primary purpose of a pull request on platforms like GitHub?
+To merge changes from your branch into another branch or repositiory after review
+
+which git command shows the changes between commits, the working directory, and the staging area?
+git diff
+
+how do you revert to a previous commit in Git, disregarding all changes after that commit?
+git reset --hard <commit_hash>
+
+
+
+
+
+
