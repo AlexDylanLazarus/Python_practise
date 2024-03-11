@@ -42,7 +42,10 @@ from pprint import pprint
 
 # sport_json = json.dumps(sport)
 # print(sport_json) #this will give an error because function cant be called in a string
-# gives serializing error which means cant convert dictionary because it contains a function
+# gives serializing error which means cant convert dictionary because it contains a function.
+# Serialization is the process of converting to json - dumps
+# Deserialization is the process of converting dictionary - loads
+
 
 # HOW TO CONVERT BACK FROM JSON TO DICTIONARY
 # student_json = """
@@ -125,18 +128,18 @@ from pprint import pprint
 # Its called loose coupling(where as long as it is in json)
 
 
-# tight coupling, is where there is tight dependency.
+# tight coupling, is where there is tight dependency. if you change the frontend then you have to change the backend.
 
 
 # why we are using json
-# json becomes a universal language
-# loose coupling- when you change between different platforms, it dont matter coz all can send json. they are not tightly associated. if u change ur backend, the frontend wont care and vise versa. this means each side is independent
-# platform independent- you can send it to any platform as long as it is json.
+# json becomes a universal language so all front end will be able to read it because all languages understandstrings.
+# loose coupling- this means each side is independent. so you can make changes to the one without affecting the other.
+# platform independent- whether use android apple etcetra, you would be able to send json files.
 
 
 # Micro service architecture
 # python can take long performance wise so add go (80% python and 20% GO). Go will make it faster summarization
-
+# Monolith architecture is opposite of micto service architecture.
 
 # with will not cause errorts
 
