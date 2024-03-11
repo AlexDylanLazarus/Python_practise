@@ -156,4 +156,7 @@ alter table movies add language text default 'English'
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS boxoffice;
 
+-- DDL: CREATE, ALTER, DROP. To modify the table itself
+-- DML: SELECT, UPDATE, DELETE, INSERT. To modify data itself not the table
 
+-- When creating a table its called a schema
