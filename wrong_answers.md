@@ -249,6 +249,47 @@ git reset --hard <commit_hash>
 
 
 
+# test 4
+what does the json.dumps() function do:
+converts a python object into json formatted string
 
+in the context of web development, how is json typically used?
+As a lightweight data-interchange format between a server and a web application
 
+what does select distinct manufacturer from  cars order by manufactuer ascc; return?
+a list of all manufacturers without duplicates, alphabetically.
 
+which sql clause is used to reurn only a specific number of records from the cars table
+limit
+
+how do you find cars manufacture between 1960 and 1970
+select * from cars where year between 1960 and 1970
+
+starts with mustang
+
+to add a new column
+alter table add column
+
+which command deletes a table
+drop 
+
+normal join 
+
+what is the purpose of data normalization
+reduce data redundancy and improve data integrity
+
+np.arange(1,20,2)
+
+4, 8
+
+pivot table 
+both a and b
+
+scatter plot 
+a and b
+
+how do you change index of a dataframe 'df' to be the name column
+df.set_index('Name')
+
+replace all occurences of a string in a dataframe 
+df.str.replace()
